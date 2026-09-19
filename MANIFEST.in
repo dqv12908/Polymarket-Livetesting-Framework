@@ -1,0 +1,5 @@
+include README.md
+include SECURITY.md
+recursive-include src/polymarket_livetesting *.html
+recursive-include examples *.py *.json
+recursive-include deploy *.service

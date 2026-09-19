@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+build/
+dist/
+.pm-live/
+.env
+*.token
+*.key
+*.pem
+state.json
+events.jsonl

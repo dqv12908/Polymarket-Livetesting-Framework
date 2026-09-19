@@ -1,0 +1,13 @@
+{
+  "signal_id": "my-model:market-slug:decision-1",
+  "market_slug": "replace-with-an-exact-polymarket-slug",
+  "outcome": "yes",
+  "probability": 0.63,
+  "emitted_at_ns": 1789808400000000000,
+  "expected_at_ns": 1789808400000000000,
+  "model": "my-model-v1",
+  "trade_intent": true,
+  "metadata": {
+    "input_cutoff": "replace-with-your-causal-input-receipt"
+  }
+}

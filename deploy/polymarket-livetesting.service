@@ -1,0 +1,28 @@
+[Unit]
+Description=Polymarket read-only live-testing framework
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=pm-live
+Group=pm-live
+WorkingDirectory=/opt/polymarket-livetesting
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/polymarket-livetesting/.venv/bin/pm-live serve --state-dir /var/lib/polymarket-livetesting --config /etc/polymarket-livetesting/config.json --token-file /etc/polymarket-livetesting/signal.token --host 127.0.0.1 --port 8765
+Restart=on-failure
+RestartSec=5
+UMask=0077
+StateDirectory=polymarket-livetesting
+StateDirectoryMode=0700
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+ReadWritePaths=/var/lib/polymarket-livetesting
+
+[Install]
+WantedBy=multi-user.target
