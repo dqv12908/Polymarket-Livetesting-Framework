@@ -1,13 +1,15 @@
 [build-system]
-requires = ["setuptools>=75", "wheel"]
+requires = ["setuptools>=77", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "polymarket-livetesting"
-version = "0.1.0"
-description = "Read-only Polymarket live-data paper execution framework with pluggable strategies"
+version = "0.2.0"
+description = "Backtest and live paper test Polymarket strategies on your own machine. Public data, simulated fills, no real orders."
 readme = "README.md"
 requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{name = "dqv12908"}]
 classifiers = [
   "Development Status :: 3 - Alpha",
@@ -18,9 +20,10 @@ classifiers = [
   "Programming Language :: Python :: 3.12",
   "Topic :: Office/Business :: Financial :: Investment",
 ]
-dependencies = []
+dependencies = ["websockets>=13"]
 
 [project.optional-dependencies]
+fast = ["orjson>=3.10"]
 dev = ["build>=1.2", "pytest>=8.3", "ruff>=0.9"]
 
 [project.scripts]
