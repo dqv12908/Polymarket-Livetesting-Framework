@@ -9,7 +9,13 @@ from pathlib import Path
 
 import pytest
 
-from polymarket_livetesting import ExecutionConfig, Order, Strategy, load_strategy, run_backtest
+from polymarket_livetesting import (
+    ExecutionConfig,
+    Order,
+    Strategy,
+    load_strategy,
+    run_backtest,
+)
 from polymarket_livetesting import cli as cli_module
 from polymarket_livetesting.dataset import export
 from polymarket_livetesting.report import summarize, text_report, verdict, write_outputs
