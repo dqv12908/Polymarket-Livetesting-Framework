@@ -13,3 +13,10 @@ dist/
 *.pem
 state.json
 events.jsonl
+trials.json
+pm-live-demo/
+reports/
+data/
+paper-session/
+*.csv.gz
+model.txt
